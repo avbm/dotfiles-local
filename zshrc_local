@@ -1,1 +1,2 @@
 # Set Search key as Escape on chromebook
+xmodmap -e 'keycode 133 = Escape'
