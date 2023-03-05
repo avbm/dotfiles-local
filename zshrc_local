@@ -1,8 +1,8 @@
 # Set Search key as Escape on chromebook
-xmodmap -e 'keycode 133 = Escape'
+# xmodmap -e 'keycode 133 = Escape'
 
 # Set caps lock as esc in case of external keyboard
 setxkbmap -option caps:escape
 
 # map nvim to nvim.appimage
-alias nvim="nvim.appimage"
+# alias nvim="nvim.appimage"
