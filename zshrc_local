@@ -2,7 +2,11 @@
 # xmodmap -e 'keycode 133 = Escape'
 
 # Set caps lock as esc in case of external keyboard
-setxkbmap -option caps:escape
+if [[ -n $WAYLAND_DISPLAY ]]; then
+    /bin/true # figure out how to set keyboard map from cli in wayland
+elif [[ -n $DISPLAY ]]; then
+    setxkbmap -option caps:escape
+fi
 
 # map nvim to nvim.appimage
 # alias nvim="nvim.appimage"
